@@ -1,0 +1,82 @@
+/*
+Sky: #CAEBF2
+Carbon: #A9A9A9
+Watermelon: #FF3B3F
+Neutral: #EFEFEF
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Bitter', serif;
+
+*/
+
+:root {
+    --accent1-color: #CAEBF2;
+    --accent2-color: #A9A9A9;
+    --highlight-color: #FF3B3F;
+    --main-color: #EFEFEF;
+    --nav-width: 17.5%;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+main {
+    margin-left:var(--nav-width);
+    padding:1px 16px;
+}
+
+h1 {
+    font-family: 'Bitter', serif;
+    font-size: 3em;
+    font-style: normal;
+}
+
+/* -- NAGIVATION ----------------------------- */
+
+nav ul {
+    background-color: var(--accent1-color);
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    position: fixed;
+    width: var(--nav-width);
+}
+
+nav li {
+    border-bottom: 1px solid white;
+}
+
+nav li a {
+    color: black;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+nav li a.active {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+nav li a:hover:not(.active) {
+    background-color: var(--main-color);
+    color: black;
+}
+
+/* -- FOOTER --------------------------------- */
+
+footer {
+    background-color: var(--accent2-color);
+    margin-left:var(--nav-width);
+    padding:10px 16px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
