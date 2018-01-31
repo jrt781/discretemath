@@ -4,16 +4,21 @@ Carbon: #A9A9A9
 Watermelon: #FF3B3F
 Neutral: #EFEFEF
 
+    --accent1-color: #CAEBF2;
+    --accent2-color: #A9A9A9;
+    --highlight-color: #FF3B3F;
+    --main-color: #EFEFEF;
+
 font-family: 'Montserrat', sans-serif;
 font-family: 'Bitter', serif;
 
 */
 
 :root {
-    --accent1-color: #CAEBF2;
-    --accent2-color: #A9A9A9;
-    --highlight-color: #FF3B3F;
-    --main-color: #EFEFEF;
+    --accent1-color: #43C0F6;
+    --accent2-color: #F81B84;
+    --highlight-color: #F5CE28;
+    --main-color: #F2EEE2;
     --nav-width: 17.5%;
 }
 
@@ -21,6 +26,7 @@ body {
     background-color: var(--main-color);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 main {
@@ -32,6 +38,7 @@ h1 {
     font-family: 'Bitter', serif;
     font-size: 3em;
     font-style: normal;
+    color: green;
 }
 
 /* -- NAGIVATION ----------------------------- */
@@ -52,15 +59,15 @@ nav li {
 }
 
 nav li a {
-    color: black;
     display: block;
     padding: 8px 16px;
     text-decoration: none;
+    color: white;
 }
 
 nav li a.active {
     background-color: var(--highlight-color);
-    color: white;
+    color: black;
 }
 
 nav li a:hover:not(.active) {
