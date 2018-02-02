@@ -1,25 +1,9 @@
-/*
-Sky: #CAEBF2
-Carbon: #A9A9A9
-Watermelon: #FF3B3F
-Neutral: #EFEFEF
-
-    --accent1-color: #CAEBF2;
-    --accent2-color: #A9A9A9;
-    --highlight-color: #FF3B3F;
-    --main-color: #EFEFEF;
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Bitter', serif;
-
-*/
-
 :root {
-    --accent1-color: #43C0F6;
-    --accent2-color: #F81B84;
-    --highlight-color: #F5CE28;
-    --main-color: #F2EEE2;
-    --nav-width: 17.5%;
+    --accent1-color: #6EC4DB;
+    --accent2-color: #66AB8C;
+    --highlight-color: #FFF7C0;
+    --active-color: #FA7C92;
+    --main-color: white;
 }
 
 body {
@@ -30,56 +14,183 @@ body {
 }
 
 main {
-    margin-left:var(--nav-width);
-    padding:1px 16px;
+    text-align: center;
+    padding: 1px 16px;
+    margin: 0 20%;
 }
 
 h1 {
     font-family: 'Bitter', serif;
     font-size: 3em;
     font-style: normal;
-    color: green;
+    color: var(--accent2-color);
+}
+
+/* -- FRONT PAGE FLEX BOX -------------------- */
+
+.left-main-row, .right-main-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin: 0 0 20px 0;
+}
+
+.left-main-row .left-cell {
+    flex: 65%;
+    max-width: 65%;
+}
+
+.center {
+    flex: 5%;
+    max-width: 5%;
+}
+
+.left-main-row .left-cell img,
+.right-main-row .right-cell img {
+    width: 100%;
+}
+
+.left-main-row .right-cell {
+    flex: 30%;
+    max-width: 30%;
+}
+
+.right-main-row .left-cell {
+    flex: 30%;
+    max-width: 30%;
+}
+
+.right-main-row .right-cell {
+    flex: 65%;
+    max-width: 65%;
 }
 
 /* -- NAGIVATION ----------------------------- */
 
 nav ul {
-    background-color: var(--accent1-color);
-    height: 100%;
     list-style-type: none;
     margin: 0;
-    overflow: auto;
     padding: 0;
-    position: fixed;
-    width: var(--nav-width);
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--accent1-color);
 }
 
 nav li {
-    border-bottom: 1px solid white;
+    float: left;
 }
 
 nav li a {
     display: block;
-    padding: 8px 16px;
-    text-decoration: none;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 nav li a.active {
+    background-color: var(--active-color);
+    color: white;
+}
+
+nav li a:hover {
     background-color: var(--highlight-color);
     color: black;
 }
 
-nav li a:hover:not(.active) {
-    background-color: var(--main-color);
-    color: black;
+/* -- ORDER FORM ----------------------------- */
+
+#icecream-order {
+    margin: 0 0 20px 0;
+}
+
+/* The container */
+.container {
+    display:inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--accent1-color);
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: var(--highlight-color);
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: var(--active-color);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+}
+
+#submit {
+    background-color: var(--accent2-color);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 /* -- FOOTER --------------------------------- */
 
 footer {
     background-color: var(--accent2-color);
-    margin-left:var(--nav-width);
     padding:10px 16px;
     text-align: center;
 }

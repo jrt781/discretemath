@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Food</title>
+		<link rel="stylesheet" href="../styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Montserrat:400,700" rel="stylesheet"> 
+	</head>
+	<body>
+
+        <nav>
+            <ul>
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="pages/order.html">Order Now!</a></li>
+              <li><a href="pages/polls.html">Polls</a></li>
+              <li><a href="pages/about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Get Yourself Some Ice Cream</h1>
+            <form id="icecream-order">
+                <h2>Ice Cream Type</h2>
+                <label class="container">Cone
+                  <input type="radio" checked="checked" name="icecream-type">
+                  <span class="checkmark"></span>
+                </label><br />
+                <label class="container">Bowl
+                  <input type="radio" name="icecream-type">
+                  <span class="checkmark"></span>
+                </label><br />
+                <label class="container">Shake
+                  <input type="radio" name="icecream-type">
+                  <span class="checkmark"></span>
+                </label><br />
+                
+                <h2>Ice Cream Flavor</h2>
+                <label class="container">Peanut Butter Bliss
+                  <input type="radio" checked="checked" name="icecream-flavor">
+                  <span class="checkmark"></span>
+                </label><br />
+                <label class="container">Rocky Road
+                  <input type="radio" name="icecream-flavor">
+                  <span class="checkmark"></span>
+                </label><br />
+                <label class="container">Banana Funana
+                  <input type="radio" name="icecream-flavor">
+                  <span class="checkmark"></span>
+                </label><br />
+                <label class="container">Very Fine Grape
+                  <input type="radio" name="icecream-flavor">
+                  <span class="checkmark"></span>
+                </label><br />
+                
+                <h2>Delivery Information</h2>
+                <label>Name: <input type="text" name="name"></label><br />
+                <label>Address: <input type="text" name="address"></label><br />
+                
+                <input type="submit" id="submit" value="Submit Order">
+            </form>
+        </main>
+        
+        <footer>
+            <a href="https://github.com/jrt781/oakleys-icecream">GitHub: jrt781/oakleys-icecream</a>
+        </footer>
+
+</body>
+</html>
