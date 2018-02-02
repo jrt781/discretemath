@@ -26,6 +26,14 @@ h1 {
     color: var(--accent2-color);
 }
 
+h2 {
+    color: var(--accent1-color);
+}
+
+h3 {
+    color: var(--active-color);
+}
+
 /* -- FRONT PAGE FLEX BOX -------------------- */
 
 .left-main-row, .right-main-row {
@@ -187,6 +195,33 @@ input[type="text"] {
     border-radius: 5px;
 }
 
+#submit:hover {
+    background-color: var(--highlight-color);
+    color: black;
+}
+
+#submit:active {
+    background-color: var(--active-color);
+    color: white;
+}
+
+/* -- POLLS ---------------------------------- */
+
+.poll-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 25px;
+    margin-bottom: 20px;
+}
+
+.poll-wrapper img {
+	width: 100%;
+}
+
+.poll-wrapper img:hover {
+	box-shadow: 0 4px 8px 2px rgba(255,247,192, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* -- FOOTER --------------------------------- */
 
 footer {
@@ -197,4 +232,10 @@ footer {
 
 footer a {
     color: white;
+}
+
+/* -- OTHER ---------------------------------- */
+#clock {
+    width: 100%;
+    max-width: 300px;
 }
